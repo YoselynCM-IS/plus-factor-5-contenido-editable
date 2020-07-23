@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        <span style="position: absolute; top: 190px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res1"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res2"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res3"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res4"></textarea>
+		</span>
+	  <span style="position: absolute; top: 276px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res5"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res6"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 321px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res7"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res8"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res9"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 387px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res10"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res11"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res12"></textarea><br>
+	  <textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res13"></textarea>
+	  </span>
+		<span style="position: absolute; top: 475px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res14"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res15"></textarea>
+		</span>
+		
+		<span style="position: absolute; top: 707px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res16"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res17"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res18"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res19"></textarea>
+		</span>
+	  <span style="position: absolute; top: 791px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res20"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res21"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res22"></textarea><br>
+	  <textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res23"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 880px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res24"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res25"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res26"></textarea><br>
+	  <textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res27"></textarea>
+	  </span>
+		<span style="position: absolute; top: 969px; left: 701px">
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res28"></textarea><br>
+			<textarea rows = "1" cols = "6" maxlength = "6" id="plus5_p120res29"></textarea>
+		</span>
+		
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1030px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary"> 
+			<input type="hidden" id="plus5_regNA" name="plus5_regNA">
+			<input type="hidden" id="plus5_regGP" name="plus5_regGP">
+			<input type="hidden" id="plus5_regCA" name="plus5_regCA">
+			<input type="hidden" id="plus5_regND" name="plus5_regND">
+			<input type="hidden" id="plus5_regCD" name="plus5_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1020px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('plus5_regNA').value = localStorage.getItem('plus5_regNA');
+    document.getElementById('plus5_regGP').value = localStorage.getItem('plus5_regGP');
+    document.getElementById('plus5_regCA').value = localStorage.getItem('plus5_regCA');
+    document.getElementById('plus5_regND').value = localStorage.getItem('plus5_regND');
+    document.getElementById('plus5_regCD').value = localStorage.getItem('plus5_regCD');
+
+	 document.getElementById('plus5_p120res1').value = localStorage.getItem('plus5_p120res1');
+    document.getElementById('plus5_p120res2').value = localStorage.getItem('plus5_p120res2');
+    document.getElementById('plus5_p120res3').value = localStorage.getItem('plus5_p120res3');
+    document.getElementById('plus5_p120res4').value = localStorage.getItem('plus5_p120res4');
+    document.getElementById('plus5_p120res5').value = localStorage.getItem('plus5_p120res5');
+    document.getElementById('plus5_p120res6').value = localStorage.getItem('plus5_p120res6');
+    document.getElementById('plus5_p120res7').value = localStorage.getItem('plus5_p120res7');
+    document.getElementById('plus5_p120res8').value = localStorage.getItem('plus5_p120res8');
+    document.getElementById('plus5_p120res9').value = localStorage.getItem('plus5_p120res9');
+    document.getElementById('plus5_p120res10').value = localStorage.getItem('plus5_p120res10');
+    document.getElementById('plus5_p120res11').value = localStorage.getItem('plus5_p120res11');
+    document.getElementById('plus5_p120res12').value = localStorage.getItem('plus5_p120res12');
+    document.getElementById('plus5_p120res13').value = localStorage.getItem('plus5_p120res13');
+    document.getElementById('plus5_p120res14').value = localStorage.getItem('plus5_p120res14');
+    document.getElementById('plus5_p120res15').value = localStorage.getItem('plus5_p120res15');
+    document.getElementById('plus5_p120res16').value = localStorage.getItem('plus5_p120res16');
+    document.getElementById('plus5_p120res17').value = localStorage.getItem('plus5_p120res17');
+    document.getElementById('plus5_p120res18').value = localStorage.getItem('plus5_p120res18');
+    document.getElementById('plus5_p120res19').value = localStorage.getItem('plus5_p120res19');
+    document.getElementById('plus5_p120res20').value = localStorage.getItem('plus5_p120res20');
+    document.getElementById('plus5_p120res21').value = localStorage.getItem('plus5_p120res21');
+    document.getElementById('plus5_p120res22').value = localStorage.getItem('plus5_p120res22');
+    document.getElementById('plus5_p120res23').value = localStorage.getItem('plus5_p120res23');
+    document.getElementById('plus5_p120res24').value = localStorage.getItem('plus5_p120res24');
+    document.getElementById('plus5_p120res25').value = localStorage.getItem('plus5_p120res25');
+    document.getElementById('plus5_p120res26').value = localStorage.getItem('plus5_p120res26');
+    document.getElementById('plus5_p120res27').value = localStorage.getItem('plus5_p120res27');
+    document.getElementById('plus5_p120res28').value = localStorage.getItem('plus5_p120res28');
+    document.getElementById('plus5_p120res29').value = localStorage.getItem('plus5_p120res29');
+    
+
+    function save_data(){
+        var plus5_p120res1 = document.getElementById('plus5_p120res1').value;
+        localStorage.setItem('plus5_p120res1', plus5_p120res1);
+        var plus5_p120res2 = document.getElementById('plus5_p120res2').value;
+        localStorage.setItem('plus5_p120res2', plus5_p120res2);
+        var plus5_p120res3 = document.getElementById('plus5_p120res3').value;
+        localStorage.setItem('plus5_p120res3', plus5_p120res3);
+        var plus5_p120res4 = document.getElementById('plus5_p120res4').value;
+        localStorage.setItem('plus5_p120res4', plus5_p120res4);
+        var plus5_p120res5 = document.getElementById('plus5_p120res5').value;
+        localStorage.setItem('plus5_p120res5', plus5_p120res5);
+        var plus5_p120res6 = document.getElementById('plus5_p120res6').value;
+        localStorage.setItem('plus5_p120res6', plus5_p120res6);
+        var plus5_p120res7 = document.getElementById('plus5_p120res7').value;
+        localStorage.setItem('plus5_p120res7', plus5_p120res7);
+        var plus5_p120res8 = document.getElementById('plus5_p120res8').value;
+        localStorage.setItem('plus5_p120res8', plus5_p120res8);
+        var plus5_p120res9 = document.getElementById('plus5_p120res9').value;
+        localStorage.setItem('plus5_p120res9', plus5_p120res9);
+        var plus5_p120res10 = document.getElementById('plus5_p120res10').value;
+        localStorage.setItem('plus5_p120res10', plus5_p120res10);
+        var plus5_p120res11 = document.getElementById('plus5_p120res11').value;
+        localStorage.setItem('plus5_p120res11', plus5_p120res11);
+        var plus5_p120res12 = document.getElementById('plus5_p120res12').value;
+        localStorage.setItem('plus5_p120res12', plus5_p120res12);
+        var plus5_p120res13 = document.getElementById('plus5_p120res13').value;
+        localStorage.setItem('plus5_p120res13', plus5_p120res13);
+        var plus5_p120res14 = document.getElementById('plus5_p120res14').value;
+        localStorage.setItem('plus5_p120res14', plus5_p120res14);
+        var plus5_p120res15 = document.getElementById('plus5_p120res15').value;
+        localStorage.setItem('plus5_p120res15', plus5_p120res15);
+        var plus5_p120res16 = document.getElementById('plus5_p120res16').value;
+        localStorage.setItem('plus5_p120res16', plus5_p120res16);
+        var plus5_p120res17 = document.getElementById('plus5_p120res17').value;
+        localStorage.setItem('plus5_p120res17', plus5_p120res17);
+        var plus5_p120res18 = document.getElementById('plus5_p120res18').value;
+        localStorage.setItem('plus5_p120res18', plus5_p120res18);
+        var plus5_p120res19 = document.getElementById('plus5_p120res19').value;
+        localStorage.setItem('plus5_p120res19', plus5_p120res19);
+        var plus5_p120res20 = document.getElementById('plus5_p120res20').value;
+        localStorage.setItem('plus5_p120res20', plus5_p120res20);
+        var plus5_p120res21 = document.getElementById('plus5_p120res21').value;
+        localStorage.setItem('plus5_p120res21', plus5_p120res21);
+        var plus5_p120res22 = document.getElementById('plus5_p120res22').value;
+        localStorage.setItem('plus5_p120res22', plus5_p120res22);
+        var plus5_p120res23 = document.getElementById('plus5_p120res23').value;
+        localStorage.setItem('plus5_p120res23', plus5_p120res23);
+        var plus5_p120res24 = document.getElementById('plus5_p120res24').value;
+        localStorage.setItem('plus5_p120res24', plus5_p120res24);
+        var plus5_p120res25 = document.getElementById('plus5_p120res25').value;
+        localStorage.setItem('plus5_p120res25', plus5_p120res25);
+        var plus5_p120res26 = document.getElementById('plus5_p120res26').value;
+        localStorage.setItem('plus5_p120res26', plus5_p120res26);
+        var plus5_p120res27 = document.getElementById('plus5_p120res27').value;
+        localStorage.setItem('plus5_p120res27', plus5_p120res27);
+        var plus5_p120res28 = document.getElementById('plus5_p120res28').value;
+        localStorage.setItem('plus5_p120res28', plus5_p120res28);
+        var plus5_p120res29 = document.getElementById('plus5_p120res29').value;
+        localStorage.setItem('plus5_p120res29', plus5_p120res29);
+        
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

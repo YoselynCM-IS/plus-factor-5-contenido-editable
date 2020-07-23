@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        <span style="position: absolute; top: 273px; left: 172px">
+			<textarea rows = "1" cols = "65" maxlength = "65" id="plus5_p110res1"></textarea>
+		</span>
+      <span style="position: absolute; top: 308px; left: 171px">
+	  <textarea rows = "1" cols = "65" maxlength = "65" id="plus5_p110res2"></textarea>
+	   </span>
+      <span style="position: absolute; top: 328px; left: 171px">
+	  <textarea rows = "1" cols = "65" maxlength = "65" id="plus5_p110res3"></textarea>
+	   </span>
+      <span style="position: absolute; top: 364px; left: 171px">
+	  <textarea rows = "1" cols = "65" maxlength = "65" id="plus5_p110res4"></textarea>
+	   </span>
+      <span style="position: absolute; top: 384px; left: 171px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res5"></textarea>
+	   </span>
+      <span style="position: absolute; top: 439px; left: 172px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res6"></textarea>
+	   </span>
+      <span style="position: absolute; top: 460px; left: 173px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res7"></textarea>
+	   </span>
+      <span style="position: absolute; top: 496px; left: 173px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res8"></textarea>
+	   </span>
+      <span style="position: absolute; top: 512px; left: 173px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res9"></textarea>
+	   </span>
+      <span style="position: absolute; top: 532px; left: 173px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res10"></textarea>
+	   </span>
+      <span style="position: absolute; top: 568px; left: 173px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res11"></textarea>
+	   </span>
+      <span style="position: absolute; top: 588px; left: 173px">
+	  <textarea rows = "1" cols = "45" maxlength = "45" id="plus5_p110res12"></textarea>
+	   </span>
+      <span style="position: absolute; top: 629px; left: 172px">
+	  <textarea rows = "1" cols = "70" maxlength = "70" id="plus5_p110res13"></textarea>
+	   </span>
+      <span style="position: absolute; top: 649px; left: 171px">
+	  <textarea rows = "1" cols = "70" maxlength = "70" id="plus5_p110res14"></textarea>
+	   </span>
+      <span style="position: absolute; top: 850px; left: 172px">
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="plus5_p110res15"></textarea>
+	   </span>
+      <span style="position: absolute; top: 890px; left: 172px">
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="plus5_p110res16"></textarea>
+	   </span>
+      <span style="position: absolute; top: 931px; left: 172px">
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="plus5_p110res17"></textarea>
+	   </span>
+      <span style="position: absolute; top: 970px; left: 172px">
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="plus5_p110res18"></textarea>
+	   </span>
+       <span style="position: absolute; top: 1013px; left: 172px">
+			<textarea rows = "1" cols = "80" maxlength = "80" id="plus5_p110res19"></textarea>
+		</span>
+       
+
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1030px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary"> 
+			<input type="hidden" id="plus5_regNA" name="plus5_regNA">
+			<input type="hidden" id="plus5_regGP" name="plus5_regGP">
+			<input type="hidden" id="plus5_regCA" name="plus5_regCA">
+			<input type="hidden" id="plus5_regND" name="plus5_regND">
+			<input type="hidden" id="plus5_regCD" name="plus5_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1020px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('plus5_regNA').value = localStorage.getItem('plus5_regNA');
+    document.getElementById('plus5_regGP').value = localStorage.getItem('plus5_regGP');
+    document.getElementById('plus5_regCA').value = localStorage.getItem('plus5_regCA');
+    document.getElementById('plus5_regND').value = localStorage.getItem('plus5_regND');
+    document.getElementById('plus5_regCD').value = localStorage.getItem('plus5_regCD');
+
+	 document.getElementById('plus5_p110res1').value = localStorage.getItem('plus5_p110res1');
+    document.getElementById('plus5_p110res2').value = localStorage.getItem('plus5_p110res2');
+    document.getElementById('plus5_p110res3').value = localStorage.getItem('plus5_p110res3');
+    document.getElementById('plus5_p110res4').value = localStorage.getItem('plus5_p110res4');
+    document.getElementById('plus5_p110res5').value = localStorage.getItem('plus5_p110res5');
+    document.getElementById('plus5_p110res6').value = localStorage.getItem('plus5_p110res6');
+    document.getElementById('plus5_p110res7').value = localStorage.getItem('plus5_p110res7');
+    document.getElementById('plus5_p110res8').value = localStorage.getItem('plus5_p110res8');
+    document.getElementById('plus5_p110res9').value = localStorage.getItem('plus5_p110res9');
+    document.getElementById('plus5_p110res10').value = localStorage.getItem('plus5_p110res10');
+    document.getElementById('plus5_p110res11').value = localStorage.getItem('plus5_p110res11');
+    document.getElementById('plus5_p110res12').value = localStorage.getItem('plus5_p110res12');
+    document.getElementById('plus5_p110res13').value = localStorage.getItem('plus5_p110res13');
+    document.getElementById('plus5_p110res14').value = localStorage.getItem('plus5_p110res14');
+    document.getElementById('plus5_p110res15').value = localStorage.getItem('plus5_p110res15');
+    document.getElementById('plus5_p110res16').value = localStorage.getItem('plus5_p110res16');
+    document.getElementById('plus5_p110res17').value = localStorage.getItem('plus5_p110res17');
+    document.getElementById('plus5_p110res18').value = localStorage.getItem('plus5_p110res18');
+    document.getElementById('plus5_p110res19').value = localStorage.getItem('plus5_p110res19');
+
+    function save_data(){
+        var plus5_p110res1 = document.getElementById('plus5_p110res1').value;
+        localStorage.setItem('plus5_p110res1', plus5_p110res1);
+        var plus5_p110res2 = document.getElementById('plus5_p110res2').value;
+        localStorage.setItem('plus5_p110res2', plus5_p110res2);
+        var plus5_p110res3 = document.getElementById('plus5_p110res3').value;
+        localStorage.setItem('plus5_p110res3', plus5_p110res3);
+        var plus5_p110res4 = document.getElementById('plus5_p110res4').value;
+        localStorage.setItem('plus5_p110res4', plus5_p110res4);
+        var plus5_p110res5 = document.getElementById('plus5_p110res5').value;
+        localStorage.setItem('plus5_p110res5', plus5_p110res5);
+        var plus5_p110res6 = document.getElementById('plus5_p110res6').value;
+        localStorage.setItem('plus5_p110res6', plus5_p110res6);
+        var plus5_p110res7 = document.getElementById('plus5_p110res7').value;
+        localStorage.setItem('plus5_p110res7', plus5_p110res7);
+        var plus5_p110res8 = document.getElementById('plus5_p110res8').value;
+        localStorage.setItem('plus5_p110res8', plus5_p110res8);
+        var plus5_p110res9 = document.getElementById('plus5_p110res9').value;
+        localStorage.setItem('plus5_p110res9', plus5_p110res9);
+        var plus5_p110res10 = document.getElementById('plus5_p110res10').value;
+        localStorage.setItem('plus5_p110res10', plus5_p110res10);
+        var plus5_p110res11 = document.getElementById('plus5_p110res11').value;
+        localStorage.setItem('plus5_p110res11', plus5_p110res11);
+        var plus5_p110res12 = document.getElementById('plus5_p110res12').value;
+        localStorage.setItem('plus5_p110res12', plus5_p110res12);
+        var plus5_p110res13 = document.getElementById('plus5_p110res13').value;
+        localStorage.setItem('plus5_p110res13', plus5_p110res13);
+        var plus5_p110res14 = document.getElementById('plus5_p110res14').value;
+        localStorage.setItem('plus5_p110res14', plus5_p110res14);
+        var plus5_p110res15 = document.getElementById('plus5_p110res15').value;
+        localStorage.setItem('plus5_p110res15', plus5_p110res15);
+        var plus5_p110res16 = document.getElementById('plus5_p110res16').value;
+        localStorage.setItem('plus5_p110res16', plus5_p110res16);
+        var plus5_p110res17 = document.getElementById('plus5_p110res17').value;
+        localStorage.setItem('plus5_p110res17', plus5_p110res17);
+        var plus5_p110res18 = document.getElementById('plus5_p110res18').value;
+        localStorage.setItem('plus5_p110res18', plus5_p110res18);
+        var plus5_p110res19 = document.getElementById('plus5_p110res19').value;
+        localStorage.setItem('plus5_p110res19', plus5_p110res19);
+        
+
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

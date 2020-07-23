@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        
+		<span style="position: absolute; top: 242px; left: 156px">
+			<textarea rows = "1" cols = "1" maxlength = "1" id="plus5_p102res1"></textarea>
+		</span>
+      <span style="position: absolute; top: 263px; left: 156px">
+	  <textarea rows = "1" cols = "1" maxlength = "1" id="plus5_p102res2"></textarea>
+	  </span>
+      <span style="position: absolute; top: 282px; left: 157px">
+	  <textarea rows = "1" cols = "1" maxlength = "1" id="plus5_p102res3"></textarea>
+		</span>
+      <span style="position: absolute; top: 322px; left: 156px">
+	  <textarea rows = "1" cols = "1" maxlength = "1" id="plus5_p102res4"></textarea>
+		</span>
+      <span style="position: absolute; top: 342px; left: 156px">
+			<textarea rows = "1" cols = "1" maxlength = "1" id="plus5_p102res5"></textarea>
+		</span>
+      
+      <span style="position: absolute; top: 472px; left: 137px">
+			<textarea rows = "1" cols = "2" maxlength = "2" id="plus5_p102res6"></textarea>
+		</span>
+      <span style="position: absolute; top: 512px; left: 138px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="plus5_p102res7"></textarea>
+		</span>
+      <span style="position: absolute; top: 572px; left: 140px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="plus5_p102res8"></textarea>
+		</span>
+      <span style="position: absolute; top: 613px; left: 139px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="plus5_p102res9"></textarea>
+		</span>
+      <span style="position: absolute; top: 652px; left: 137px">
+			<textarea rows = "1" cols = "2" maxlength = "2" id="plus5_p102res10"></textarea>
+		</span>
+      
+      <span style="position: absolute; top: 894px; left: 210px">
+			<input type="checkbox" id="plus5_p102res11">
+		</span>
+      <span style="position: absolute; top: 894px; left: 308px">
+			<input type="checkbox" id="plus5_p102res12">
+	  </span>
+      <span style="position: absolute; top: 915px; left: 210px">
+			<input type="checkbox" id="plus5_p102res13">
+	  </span>
+      <span style="position: absolute; top: 912px; left: 313px">
+			<input type="checkbox" id="plus5_p102res14">
+	  </span>
+      <span style="position: absolute; top: 934px; left: 209px">
+			<input type="checkbox" id="plus5_p102res15">
+	  </span>
+      <span style="position: absolute; top: 933px; left: 315px">
+			<input type="checkbox" id="plus5_p102res16">
+	  </span>
+      <span style="position: absolute; top: 952px; left: 211px">
+			<input type="checkbox" id="plus5_p102res17">
+	  </span>
+      <span style="position: absolute; top: 954px; left: 303px">
+			<input type="checkbox" id="plus5_p102res18">
+	  </span>
+      <span style="position: absolute; top: 974px; left: 216px">
+			<input type="checkbox" id="plus5_p102res19">
+	  </span>
+      <span style="position: absolute; top: 975px; left: 310px">
+			<input type="checkbox" id="plus5_p102res20">
+	  </span>
+      <span style="position: absolute; top: 893px; left: 451px">
+			<input type="checkbox" id="plus5_p102res21">
+	  </span>
+      <span style="position: absolute; top: 894px; left: 568px">
+			<input type="checkbox" id="plus5_p102res22">
+	  </span>
+      <span style="position: absolute; top: 914px; left: 459px">
+			<input type="checkbox" id="plus5_p102res23">
+	  </span>
+      <span style="position: absolute; top: 912px; left: 569px">
+			<input type="checkbox" id="plus5_p102res24">
+		</span>
+      <span style="position: absolute; top: 935px; left: 468px">
+			<input type="checkbox" id="plus5_p102res25">
+		</span>
+      <span style="position: absolute; top: 934px; left: 572px">
+			<input type="checkbox" id="plus5_p102res26">
+		</span>
+      <span style="position: absolute; top: 955px; left: 478px">
+			<input type="checkbox" id="plus5_p102res27">
+		</span>
+      <span style="position: absolute; top: 952px; left: 560px">
+			<input type="checkbox" id="plus5_p102res28">
+		</span>
+      <span style="position: absolute; top: 975px; left: 456px">
+			<input type="checkbox" id="plus5_p102res29">
+		</span>
+      <span style="position: absolute; top: 974px; left: 571px">
+			<input type="checkbox" id="plus5_p102res30">
+		</span>
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1030px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary"> 
+			<input type="hidden" id="plus5_regNA" name="plus5_regNA">
+			<input type="hidden" id="plus5_regGP" name="plus5_regGP">
+			<input type="hidden" id="plus5_regCA" name="plus5_regCA">
+			<input type="hidden" id="plus5_regND" name="plus5_regND">
+			<input type="hidden" id="plus5_regCD" name="plus5_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1020px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('plus5_regNA').value = localStorage.getItem('plus5_regNA');
+    document.getElementById('plus5_regGP').value = localStorage.getItem('plus5_regGP');
+    document.getElementById('plus5_regCA').value = localStorage.getItem('plus5_regCA');
+    document.getElementById('plus5_regND').value = localStorage.getItem('plus5_regND');
+    document.getElementById('plus5_regCD').value = localStorage.getItem('plus5_regCD');
+
+	 document.getElementById('plus5_p102res1').value = localStorage.getItem('plus5_p102res1');
+    document.getElementById('plus5_p102res2').value = localStorage.getItem('plus5_p102res2');
+    document.getElementById('plus5_p102res3').value = localStorage.getItem('plus5_p102res3');
+    document.getElementById('plus5_p102res4').value = localStorage.getItem('plus5_p102res4');
+    document.getElementById('plus5_p102res5').value = localStorage.getItem('plus5_p102res5');
+    document.getElementById('plus5_p102res6').value = localStorage.getItem('plus5_p102res6');
+    document.getElementById('plus5_p102res7').value = localStorage.getItem('plus5_p102res7');
+    document.getElementById('plus5_p102res8').value = localStorage.getItem('plus5_p102res8');
+    document.getElementById('plus5_p102res9').value = localStorage.getItem('plus5_p102res9');
+    document.getElementById('plus5_p102res10').value = localStorage.getItem('plus5_p102res10');
+	document.getElementById('plus5_p102res11').value = localStorage.getItem('plus5_p102res11');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res11').value == "1")
+        document.getElementById("plus5_p102res11").checked = true; 
+
+    document.getElementById('plus5_p102res12').value = localStorage.getItem('plus5_p102res12');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res12').value == "1")
+        document.getElementById("plus5_p102res12").checked = true; 
+
+    document.getElementById('plus5_p102res13').value = localStorage.getItem('plus5_p102res13');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res13').value == "1")
+        document.getElementById("plus5_p102res13").checked = true; 
+
+    document.getElementById('plus5_p102res14').value = localStorage.getItem('plus5_p102res14');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res14').value == "1")
+        document.getElementById("plus5_p102res14").checked = true; 
+
+    document.getElementById('plus5_p102res15').value = localStorage.getItem('plus5_p102res15');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res15').value == "1")
+        document.getElementById("plus5_p102res15").checked = true; 
+
+    document.getElementById('plus5_p102res16').value = localStorage.getItem('plus5_p102res16');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res16').value == "1")
+        document.getElementById("plus5_p102res16").checked = true; 
+
+    document.getElementById('plus5_p102res17').value = localStorage.getItem('plus5_p102res17');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res17').value == "1")
+        document.getElementById("plus5_p102res17").checked = true; 
+
+    document.getElementById('plus5_p102res18').value = localStorage.getItem('plus5_p102res18');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res18').value == "1")
+        document.getElementById("plus5_p102res18").checked = true; 
+
+    document.getElementById('plus5_p102res19').value = localStorage.getItem('plus5_p102res19');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('plus5_p102res19').value == "1")
+        document.getElementById("plus5_p102res19").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res20').value = localStorage.getItem('plus5_p102res20');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res20').value == "1")
+        document.getElementById("plus5_p102res20").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res21').value = localStorage.getItem('plus5_p102res21');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res21').value == "1")
+        document.getElementById("plus5_p102res21").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res22').value = localStorage.getItem('plus5_p102res22');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res22').value == "1")
+        document.getElementById("plus5_p102res22").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res23').value = localStorage.getItem('plus5_p102res23');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res23').value == "1")
+        document.getElementById("plus5_p102res23").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res24').value = localStorage.getItem('plus5_p102res24');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res24').value == "1")
+        document.getElementById("plus5_p102res24").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res25').value = localStorage.getItem('plus5_p102res25');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res25').value == "1")
+        document.getElementById("plus5_p102res25").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res26').value = localStorage.getItem('plus5_p102res26');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res26').value == "1")
+        document.getElementById("plus5_p102res26").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res27').value = localStorage.getItem('plus5_p102res27');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res27').value == "1")
+        document.getElementById("plus5_p102res27").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res28').value = localStorage.getItem('plus5_p102res28');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res28').value == "1")
+        document.getElementById("plus5_p102res28").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res29').value = localStorage.getItem('plus5_p102res29');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res29').value == "1")
+        document.getElementById("plus5_p102res29").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus5_p102res30').value = localStorage.getItem('plus5_p102res30');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus5_p102res30').value == "1")
+        document.getElementById("plus5_p102res30").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+    
+
+    function save_data(){
+        var plus5_p102res1 = document.getElementById('plus5_p102res1').value;
+        localStorage.setItem('plus5_p102res1', plus5_p102res1);
+        var plus5_p102res2 = document.getElementById('plus5_p102res2').value;
+        localStorage.setItem('plus5_p102res2', plus5_p102res2);
+        var plus5_p102res3 = document.getElementById('plus5_p102res3').value;
+        localStorage.setItem('plus5_p102res3', plus5_p102res3);
+        var plus5_p102res4 = document.getElementById('plus5_p102res4').value;
+        localStorage.setItem('plus5_p102res4', plus5_p102res4);
+        var plus5_p102res5 = document.getElementById('plus5_p102res5').value;
+        localStorage.setItem('plus5_p102res5', plus5_p102res5);
+        var plus5_p102res6 = document.getElementById('plus5_p102res6').value;
+        localStorage.setItem('plus5_p102res6', plus5_p102res6);
+        var plus5_p102res7 = document.getElementById('plus5_p102res7').value;
+        localStorage.setItem('plus5_p102res7', plus5_p102res7);
+        var plus5_p102res8 = document.getElementById('plus5_p102res8').value;
+        localStorage.setItem('plus5_p102res8', plus5_p102res8);
+        var plus5_p102res9 = document.getElementById('plus5_p102res9').value;
+        localStorage.setItem('plus5_p102res9', plus5_p102res9);
+        var plus5_p102res10 = document.getElementById('plus5_p102res10').value;
+        localStorage.setItem('plus5_p102res10', plus5_p102res10);
+		//** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res11').checked;
+        if(isChecked){
+            var plus5_p102res11 = "1";
+        }    
+        localStorage.setItem('plus5_p102res11', plus5_p102res11);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res12').checked;
+        if(isChecked){
+            var plus5_p102res12 = "1";
+        }    
+        localStorage.setItem('plus5_p102res12', plus5_p102res12);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res13').checked;
+        if(isChecked){
+            var plus5_p102res13 = "1";
+        }    
+        localStorage.setItem('plus5_p102res13', plus5_p102res13);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res14').checked;
+        if(isChecked){
+            var plus5_p102res14 = "1";
+        }    
+        localStorage.setItem('plus5_p102res14', plus5_p102res14);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res15').checked;
+        if(isChecked){
+            var plus5_p102res15 = "1";
+        }    
+        localStorage.setItem('plus5_p102res15', plus5_p102res15);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res16').checked;
+        if(isChecked){
+            var plus5_p102res16 = "1";
+        }    
+        localStorage.setItem('plus5_p102res16', plus5_p102res16);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res17').checked;
+        if(isChecked){
+            var plus5_p102res17 = "1";
+        }    
+        localStorage.setItem('plus5_p102res17', plus5_p102res17);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res18').checked;
+        if(isChecked){
+            var plus5_p102res18 = "1";
+        }    
+        localStorage.setItem('plus5_p102res18', plus5_p102res18);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res19').checked;
+        if(isChecked){
+            var plus5_p102res19 = "1";
+        }
+        localStorage.setItem('plus5_p102res19', plus5_p102res19);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res20').checked;
+        if(isChecked){
+            var plus5_p102res20 = "1";
+        }    
+        localStorage.setItem('plus5_p102res20', plus5_p102res20);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res21').checked;
+        if(isChecked){
+            var plus5_p102res21 = "1";
+        }    
+        localStorage.setItem('plus5_p102res21', plus5_p102res21);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res22').checked;
+        if(isChecked){
+            var plus5_p102res22 = "1";
+        }    
+        localStorage.setItem('plus5_p102res22', plus5_p102res22);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res23').checked;
+        if(isChecked){
+            var plus5_p102res23 = "1";
+        }    
+        localStorage.setItem('plus5_p102res23', plus5_p102res23);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res24').checked;
+        if(isChecked){
+            var plus5_p102res24 = "1";
+        }    
+        localStorage.setItem('plus5_p102res24', plus5_p102res24);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res25').checked;
+        if(isChecked){
+            var plus5_p102res25 = "1";
+        }    
+        localStorage.setItem('plus5_p102res25', plus5_p102res25);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res26').checked;
+        if(isChecked){
+            var plus5_p102res26 = "1";
+        }    
+        localStorage.setItem('plus5_p102res26', plus5_p102res26);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res27').checked;
+        if(isChecked){
+            var plus5_p102res27 = "1";
+        }    
+        localStorage.setItem('plus5_p102res27', plus5_p102res27);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res28').checked;
+        if(isChecked){
+            var plus5_p102res28 = "1";
+        }    
+        localStorage.setItem('plus5_p102res28', plus5_p102res28);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res29').checked;
+        if(isChecked){
+            var plus5_p102res29 = "1";
+        }    
+        localStorage.setItem('plus5_p102res29', plus5_p102res29);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus5_p102res30').checked;
+        if(isChecked){
+            var plus5_p102res30 = "1";
+        }    
+        localStorage.setItem('plus5_p102res30', plus5_p102res30);
+        //** FIN PARA GUARDAR CHECKBOX **//
+        
+
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>
