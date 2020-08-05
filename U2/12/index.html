@@ -17,17 +17,21 @@
     <div id="contenedor">
       <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
         <!--Empezar a agregar contenido-->
+         <span style="position: absolute; top: 166px; left: 366px">
+			<textarea rows = "1" cols = "23" maxlength = "23" id="plus5_p39res28"></textarea>
+	  </span>
         <span style="position: absolute; top: 185px; left: 300px">
 			<textarea rows = "1" cols = "20" maxlength = "20" id="plus5_p39res1"></textarea>
 		</span>
+       
       <span style="position: absolute; top: 206px; left: 332px">
 	  <textarea rows = "1" cols = "20" maxlength = "20" id="plus5_p39res2"></textarea>
 	   </span>
       <span style="position: absolute; top: 225px; left: 407px">
-	  <textarea rows = "1" cols = "20" maxlength = "20" id="plus5_p39res3"></textarea>
+	  <textarea rows = "1" cols = "23" maxlength = "23" id="plus5_p39res3"></textarea>
 	   </span>
       <span style="position: absolute; top: 246px; left: 405px">
-	  <textarea rows = "1" cols = "20" maxlength = "20" id="plus5_p39res4"></textarea>
+	  <textarea rows = "1" cols = "23" maxlength = "23" id="plus5_p39res4"></textarea>
 	   </span>
       <span style="position: absolute; top: 307px; left: 573px">
 	  <textarea rows = "1" cols = "10" maxlength = "10" id="plus5_p39res5"></textarea>
@@ -75,7 +79,7 @@
 	  <textarea rows = "1" cols = "10" maxlength = "10" id="plus5_p39res19"></textarea>
 	   </span>
       <span style="position: absolute; top: 738px; left: 147px">
-	  <textarea rows = "1" cols = "10" maxlength = "10" id="plus5_p39res20"></textarea>
+	  <textarea rows = "1" cols = "11" maxlength = "11" id="plus5_p39res20"></textarea>
 	   </span>
       <span style="position: absolute; top: 759px; left: 417px">
 	  <textarea rows = "1" cols = "10" maxlength = "10" id="plus5_p39res21"></textarea>
@@ -158,6 +162,7 @@
     document.getElementById('plus5_p39res25').value = localStorage.getItem('plus5_p39res25');
     document.getElementById('plus5_p39res26').value = localStorage.getItem('plus5_p39res26');
     document.getElementById('plus5_p39res27').value = localStorage.getItem('plus5_p39res27');
+	document.getElementById('plus5_p39res28').value = localStorage.getItem('plus5_p39res28');
     
 
     function save_data(){
@@ -215,6 +220,8 @@
         localStorage.setItem('plus5_p39res26', plus5_p39res26);
         var plus5_p39res27 = document.getElementById('plus5_p39res27').value;
         localStorage.setItem('plus5_p39res27', plus5_p39res27);
+		var plus5_p39res28 = document.getElementById('plus5_p39res28').value;
+        localStorage.setItem('plus5_p39res28', plus5_p39res28);
         
         alert("Saved correctly");
     }
